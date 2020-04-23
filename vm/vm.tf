@@ -143,9 +143,7 @@ resource "azurerm_role_definition" "admin_vm" {
   description = "This is a custom role created via Terraform"
 
   permissions {
-    actions     = ["Microsoft.Resources/subscriptions/resourceGroups/read",
-     "Microsoft.Storage/storageAccounts/blobServices/containers/*"]
-    data_actions = ["Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read"]
+    actions     = ["*"]
     not_actions = []
   }
 
@@ -155,7 +153,7 @@ resource "azurerm_role_definition" "admin_vm" {
 }
 resource "azurerm_role_assignment" "bastion" {
     scope              = "${data.azurerm_subscription.primary.id}"
-    role_definition_id = "${data.azurerm_subscription.primary.id}${azurerm_role_definition.admin_vm.id}"
+    role_definition_id = "Reader"
     principal_id       = "${azurerm_linux_virtual_machine.bastion.identity[0].principal_id}"
 
     lifecycle {
