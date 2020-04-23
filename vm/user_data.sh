@@ -14,4 +14,6 @@ wget https://get.helm.sh/helm-v3.2.0-linux-amd64.tar.gz
 tar -zxvf helm-v3.2.0-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 /bin/mkdir /home/ubuntu/.kube
+az login --identity
+az storage blob download -c terraform -n config -f /home/ubuntu/.kube/config --account-name=insightsinfra
 helm repo add stable https://kubernetes-charts.storage.googleapis.com/
