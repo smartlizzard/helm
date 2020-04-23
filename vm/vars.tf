@@ -13,3 +13,6 @@ variable "dns_prefix" {
 variable "node_count" {
   default = "1"
 }
+variable "ResourceGroup" {
+  default ="InsightResourceGroup"
+}

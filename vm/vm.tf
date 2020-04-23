@@ -13,7 +13,6 @@ terraform {
 data "azurerm_subscription" "primary" {
 }
 
-
 resource "azurerm_virtual_network" "network" {
     name                = "${var.name}"
     address_space       = ["10.0.0.0/16"]
@@ -144,7 +143,8 @@ resource "azurerm_role_definition" "admin_vm" {
   description = "This is a custom role created via Terraform"
 
   permissions {
-    actions     = ["Microsoft.Resources/subscriptions/resourceGroups/read"]
+    actions     = ["Microsoft.Resources/subscriptions/resourceGroups/read",
+     "Microsoft.Storage/storageAccounts/blobServices/containers/*"]
     data_actions = ["Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read"]
     not_actions = []
   }

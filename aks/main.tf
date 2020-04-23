@@ -40,7 +40,7 @@ resource "azuread_application" "acr-app" {
 }
 
 resource "azuread_service_principal" "acr-sp" {
-    application_id = "${azuread_application.acr-app.application_id}"
+  application_id = "${azuread_application.acr-app.application_id}"
 }
 
 resource "azuread_service_principal_password" "acr-sp-pass" {
@@ -50,9 +50,9 @@ resource "azuread_service_principal_password" "acr-sp-pass" {
 }
 
 resource "azurerm_role_assignment" "acr-assignment" {
-    scope                = "${azurerm_container_registry.acr.id}"
-    role_definition_name = "AcrPull"
-    principal_id         = "${azuread_service_principal_password.acr-sp-pass.service_principal_id}"
+  scope                = "${azurerm_container_registry.acr.id}"
+  role_definition_name = "AcrPull"
+  principal_id         = "${azuread_service_principal_password.acr-sp-pass.service_principal_id}"
 }
 
 ########################## AKS #############################################
