@@ -1,9 +1,28 @@
 apiVersion: v1
 entries:
+  docker-registry:
+  - apiVersion: v1
+    appVersion: 2.7.1
+    created: "2020-04-24T13:54:57.5814436+05:30"
+    description: A Helm chart for Docker Registry
+    digest: 67bf49c25f1aaccd3d8ee82e1d77ef490be9c6a7719061a037c5bf58c530de40
+    home: https://hub.docker.com/_/registry/
+    icon: https://hub.docker.com/public/images/logos/mini-logo.svg
+    maintainers:
+    - email: jpds@protonmail.com
+      name: jpds
+    - email: pete.brown@powerhrg.com
+      name: rendhalver
+    name: docker-registry
+    sources:
+    - https://github.com/docker/distribution-library-image
+    urls:
+    - docker-registry-1.9.2.tgz
+    version: 1.9.2
   postgresql-ha:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2020-04-24T00:59:50.1039461+05:30"
+    created: "2020-04-24T13:54:57.6202492+05:30"
     description: Chart for PostgreSQL with HA architecture (using Replication Manager
       (repmgr) and Pgpool).
     digest: 4248621c665a471d49171f6dda090ad85fe72ba3252c99f9d09a78db472b9aed
@@ -32,7 +51,7 @@ entries:
   sonarqube:
   - apiVersion: v1
     appVersion: 8.2-community
-    created: "2020-04-24T00:59:50.1068949+05:30"
+    created: "2020-04-24T13:54:57.6544254+05:30"
     description: SonarQube is an open sourced code quality scanning tool
     digest: 38ef5990b4137c66abadf4e085589224cd634651af4ed3e269426ed0f4ef986d
     home: https://www.sonarqube.org/
@@ -51,4 +70,4 @@ entries:
     urls:
     - sonarqube-6.0.1.tgz
     version: 6.0.1
-generated: "2020-04-24T00:59:50.0726551+05:30"
+generated: "2020-04-24T13:54:57.4772161+05:30"
