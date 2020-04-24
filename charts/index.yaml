@@ -3,7 +3,7 @@ entries:
   docker-registry:
   - apiVersion: v1
     appVersion: 2.7.1
-    created: "2020-04-24T14:25:10.560377+05:30"
+    created: "2020-04-24T14:43:07.6570677+05:30"
     description: A Helm chart for Docker Registry
     digest: 67bf49c25f1aaccd3d8ee82e1d77ef490be9c6a7719061a037c5bf58c530de40
     home: https://hub.docker.com/_/registry/
@@ -22,7 +22,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.30.0
-    created: "2020-04-24T14:25:10.6283152+05:30"
+    created: "2020-04-24T14:43:07.6590643+05:30"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: 183ecb920dcc8b7a93cce6fb3c8cdd9616b63c8d16f88da2859c0c162c1afbda
@@ -43,10 +43,28 @@ entries:
     urls:
     - nginx-ingress-1.36.3.tgz
     version: 1.36.3
+  - apiVersion: v1
+    appVersion: 1.6.3
+    created: "2020-04-24T14:43:07.6570677+05:30"
+    description: NGINX Ingress Controller
+    digest: 0c6cafcc981fd202447d6e48b4ba4be22b1f3c56380ee7a9e121998476c80182
+    icon: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v1.6.3/deployments/helm-chart/chart-icon.png
+    keywords:
+    - ingress
+    - nginx
+    maintainers:
+    - email: kubernetes@nginx.com
+      name: NGINX Kubernetes Team
+    name: nginx-ingress
+    sources:
+    - https://github.com/nginxinc/kubernetes-ingress/tree/v1.6.3/deployments/helm-chart
+    urls:
+    - nginx-ingress-0.4.3.tgz
+    version: 0.4.3
   postgresql-ha:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2020-04-24T14:25:10.7054196+05:30"
+    created: "2020-04-24T14:43:07.6971771+05:30"
     description: Chart for PostgreSQL with HA architecture (using Replication Manager
       (repmgr) and Pgpool).
     digest: 4248621c665a471d49171f6dda090ad85fe72ba3252c99f9d09a78db472b9aed
@@ -75,7 +93,7 @@ entries:
   sonarqube:
   - apiVersion: v1
     appVersion: 8.2-community
-    created: "2020-04-24T14:25:10.76565+05:30"
+    created: "2020-04-24T14:43:07.7382618+05:30"
     description: SonarQube is an open sourced code quality scanning tool
     digest: 38ef5990b4137c66abadf4e085589224cd634651af4ed3e269426ed0f4ef986d
     home: https://www.sonarqube.org/
@@ -94,4 +112,4 @@ entries:
     urls:
     - sonarqube-6.0.1.tgz
     version: 6.0.1
-generated: "2020-04-24T14:25:10.461256+05:30"
+generated: "2020-04-24T14:43:07.6560341+05:30"
