@@ -3,7 +3,7 @@ entries:
   docker-registry:
   - apiVersion: v1
     appVersion: 2.7.1
-    created: "2020-04-24T17:29:21.1997891+05:30"
+    created: "2020-04-24T23:37:20.8473237+05:30"
     description: A Helm chart for Docker Registry
     digest: 67bf49c25f1aaccd3d8ee82e1d77ef490be9c6a7719061a037c5bf58c530de40
     home: https://hub.docker.com/_/registry/
@@ -17,12 +17,12 @@ entries:
     sources:
     - https://github.com/docker/distribution-library-image
     urls:
-    - https://github.com/smartlizzard/helm/tree/master/charts/docker-registry-1.9.2.tgz
+    - https://smartlizzard.github.io/helm/charts/docker-registry-1.9.2.tgz
     version: 1.9.2
   nginx-ingress:
   - apiVersion: v1
     appVersion: 1.6.3
-    created: "2020-04-24T17:29:21.2367676+05:30"
+    created: "2020-04-24T23:37:20.9712496+05:30"
     description: NGINX Ingress Controller
     digest: 0c6cafcc981fd202447d6e48b4ba4be22b1f3c56380ee7a9e121998476c80182
     icon: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v1.6.3/deployments/helm-chart/chart-icon.png
@@ -36,12 +36,12 @@ entries:
     sources:
     - https://github.com/nginxinc/kubernetes-ingress/tree/v1.6.3/deployments/helm-chart
     urls:
-    - https://github.com/smartlizzard/helm/tree/master/charts/nginx-ingress-0.4.3.tgz
+    - https://smartlizzard.github.io/helm/charts/nginx-ingress-0.4.3.tgz
     version: 0.4.3
   postgresql-ha:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2020-04-24T17:29:21.3215302+05:30"
+    created: "2020-04-24T23:37:21.0050386+05:30"
     description: Chart for PostgreSQL with HA architecture (using Replication Manager
       (repmgr) and Pgpool).
     digest: 4248621c665a471d49171f6dda090ad85fe72ba3252c99f9d09a78db472b9aed
@@ -65,12 +65,12 @@ entries:
     sources:
     - https://github.com/bitnami/bitnami-docker-postgresql
     urls:
-    - https://github.com/smartlizzard/helm/tree/master/charts/postgresql-ha-3.0.1.tgz
+    - https://smartlizzard.github.io/helm/charts/postgresql-ha-3.0.1.tgz
     version: 3.0.1
   sonarqube:
   - apiVersion: v1
     appVersion: 8.2-community
-    created: "2020-04-24T17:29:21.3554075+05:30"
+    created: "2020-04-24T23:37:21.0203737+05:30"
     description: SonarQube is an open sourced code quality scanning tool
     digest: 38ef5990b4137c66abadf4e085589224cd634651af4ed3e269426ed0f4ef986d
     home: https://www.sonarqube.org/
@@ -87,31 +87,6 @@ entries:
     sources:
     - https://github.com/SonarSource/docker-sonarqube
     urls:
-    - https://github.com/smartlizzard/helm/tree/master/charts/sonarqube-6.0.1.tgz
+    - https://smartlizzard.github.io/helm/charts/sonarqube-6.0.1.tgz
     version: 6.0.1
-  spinnaker:
-  - apiVersion: v1
-    appVersion: 1.16.2
-    created: "2020-04-24T17:29:21.4032775+05:30"
-    description: Open source, multi-cloud continuous delivery platform for releasing
-      software changes with high velocity and confidence.
-    digest: b4bd9ba46b26aca2d907c8bfdc1751f597070c32ba33bb915911cae45a3d6d94
-    home: http://spinnaker.io/
-    icon: https://pbs.twimg.com/profile_images/669205226994319362/O7OjwPrh_400x400.png
-    maintainers:
-    - email: viglesias@google.com
-      name: viglesiasce
-    - email: ezimanyi@google.com
-      name: ezimanyi
-    - email: hello@dwardu.com
-      name: dwardu89
-    - email: username.taken@gmail.com
-      name: paulczar
-    name: spinnaker
-    sources:
-    - https://github.com/spinnaker
-    - https://github.com/viglesiasce/images
-    urls:
-    - https://github.com/smartlizzard/helm/tree/master/charts/spinnaker-2.0.0-rc3.tgz
-    version: 2.0.0-rc3
-generated: "2020-04-24T17:29:21.1061723+05:30"
+generated: "2020-04-24T23:37:20.7694302+05:30"
