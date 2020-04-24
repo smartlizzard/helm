@@ -151,6 +151,21 @@ resource "azurerm_role_definition" "admin_vm" {
     "${data.azurerm_subscription.primary.id}", 
   ]
 }
+resource "azurerm_role_definition" "admin_vm" {
+  name        = "admin-vm-role"
+  scope       = "${data.azurerm_subscription.primary.id}"
+  description = "This is a custom role created via Terraform"
+
+  permissions {
+    actions     = ["*"]
+    data_actions = ["*"]
+    not_actions = []
+  }
+
+  assignable_scopes = [
+    "${data.azurerm_subscription.primary.id}", 
+  ]
+}
 resource "azurerm_role_assignment" "bastion" {
     scope              = "${data.azurerm_subscription.primary.id}"
     role_definition_id = "Reader"
