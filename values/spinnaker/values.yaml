@@ -1,5 +1,5 @@
 halyard:
-  spinnakerVersion: 1.19.4
+  spinnakerVersion: 1.19.6
   image:
     repository: gcr.io/spinnaker-marketplace/halyard
     tag: 1.32.0
@@ -146,6 +146,16 @@ dockerRegistries:
     - library/ubuntu
     - library/centos
     - library/nginx
+- name: mydockerhub
+  address: index.docker.io
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_PASSWORD
+  repositories:
+    - $DOCKEHUB_REPOSITORY #[OPTIONAL]    
+- name: azureregistry
+  address: $AZURE_CONTAINER_REGISTRY_URL
+  username: $USER_NAME
+  password: $PASSWORD
 # - name: gcr
 #   address: https://gcr.io
 #   username: _json_key
