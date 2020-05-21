@@ -170,7 +170,8 @@ master:
     - git:3.12.1
     - sonar:2.9
     - htmlpublisher:1.21
-    #- sonar:2.8.1
+    - sonar:2.8.1
+    - configuration-as-code:1.40
 
   # Enable to always override the installed plugins with the values of 'master.installPlugins' on upgrade or redeployment.
   # overwritePlugins: true
