@@ -178,8 +178,8 @@ plugins:
 
 # A custom sonar.properties file can be provided via dictionary.
 # For example:
-# sonarProperties:
-#   sonar.forceAuthentication: true
+sonarProperties:
+  sonar.forceAuthentication: true
 #   sonar.security.realm: LDAP
 #   ldap.url: ldaps://organization.com
 
