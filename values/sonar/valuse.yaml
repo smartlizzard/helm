@@ -38,7 +38,7 @@ ingress:
   enabled: true
   # Used to create an Ingress record.
   hosts:
-    - name: jenkins.eskool.com
+    - name: sonar.eskool.com
       # Different clouds or configurations might need /* as the default path
       path: /
       # For additional control over serviceName and servicePort
