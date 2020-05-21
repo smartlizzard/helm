@@ -163,14 +163,21 @@ master:
 
   # List of plugins to be install during Jenkins master start
   installPlugins:
-    - kubernetes:1.19.0
-    - workflow-job:2.35
+    - kubernetes:1.25.7
+    - workflow-job:2.39
     - workflow-aggregator:2.6
-    - credentials-binding:1.20
-    - git:3.12.1
+    - credentials-binding:1.23
+    - git:4.2.2
     - sonar:2.11
     - htmlpublisher:1.21
     - configuration-as-code:1.40
+    - command-launcher:2.86
+    - jdk-tool:2.112
+    - ansible:1.0
+    - credentials:2.3.7
+    - pipeline-utility-steps:2.5.0
+    - workflow-step-api:2.22
+    - appcenter:0.9.2
 
   # Enable to always override the installed plugins with the values of 'master.installPlugins' on upgrade or redeployment.
   # overwritePlugins: true
