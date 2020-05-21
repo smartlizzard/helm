@@ -3,7 +3,7 @@ entries:
   docker-registry:
   - apiVersion: v1
     appVersion: 2.7.1
-    created: "2020-04-24T23:37:20.8473237+05:30"
+    created: "2020-05-21T17:08:59.0390092+05:30"
     description: A Helm chart for Docker Registry
     digest: 67bf49c25f1aaccd3d8ee82e1d77ef490be9c6a7719061a037c5bf58c530de40
     home: https://hub.docker.com/_/registry/
@@ -19,10 +19,32 @@ entries:
     urls:
     - https://smartlizzard.github.io/helm/charts/docker-registry-1.9.2.tgz
     version: 1.9.2
+  jenkins:
+  - apiVersion: v1
+    appVersion: lts
+    created: "2020-05-21T17:08:59.116007+05:30"
+    description: Open source continuous integration server. It supports multiple SCM
+      tools including CVS, Subversion and Git. It can execute Apache Ant and Apache
+      Maven-based projects as well as arbitrary scripts.
+    digest: b32e2f5e1d6e365073dc6373eded97404cad692ee326fd4b12cd62b5151dd6a7
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    maintainers:
+    - email: pradhanraghunath91@gmail.com
+      name: Raghunath
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-jnlp-slave
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    urls:
+    - https://smartlizzard.github.io/helm/charts/jenkins-1.17.0.tgz
+    version: 1.17.0
   nginx-ingress:
   - apiVersion: v1
     appVersion: 1.6.3
-    created: "2020-04-24T23:37:20.9712496+05:30"
+    created: "2020-05-21T17:08:59.1563159+05:30"
     description: NGINX Ingress Controller
     digest: 0c6cafcc981fd202447d6e48b4ba4be22b1f3c56380ee7a9e121998476c80182
     icon: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v1.6.3/deployments/helm-chart/chart-icon.png
@@ -41,7 +63,7 @@ entries:
   postgresql-ha:
   - apiVersion: v1
     appVersion: 11.7.0
-    created: "2020-04-24T23:37:21.0050386+05:30"
+    created: "2020-05-21T17:08:59.1632952+05:30"
     description: Chart for PostgreSQL with HA architecture (using Replication Manager
       (repmgr) and Pgpool).
     digest: 4248621c665a471d49171f6dda090ad85fe72ba3252c99f9d09a78db472b9aed
@@ -70,7 +92,7 @@ entries:
   sonarqube:
   - apiVersion: v1
     appVersion: 8.2-community
-    created: "2020-04-24T23:37:21.0203737+05:30"
+    created: "2020-05-21T17:08:59.1722209+05:30"
     description: SonarQube is an open sourced code quality scanning tool
     digest: 38ef5990b4137c66abadf4e085589224cd634651af4ed3e269426ed0f4ef986d
     home: https://www.sonarqube.org/
@@ -89,4 +111,4 @@ entries:
     urls:
     - https://smartlizzard.github.io/helm/charts/sonarqube-6.0.1.tgz
     version: 6.0.1
-generated: "2020-04-24T23:37:20.7694302+05:30"
+generated: "2020-05-21T17:08:58.8532847+05:30"
