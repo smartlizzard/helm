@@ -171,8 +171,8 @@ master:
     - sonar:2.11
     - htmlpublisher:1.23
     - configuration-as-code:1.40
-    - command-launcher:2.86
-    - jdk-tool:2.112
+    - command-launcher:1.4
+    - jdk-tool:1.4
     - ansible:1.0
     - credentials:2.3.7
     - pipeline-utility-steps:2.5.0
