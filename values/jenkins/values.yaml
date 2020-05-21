@@ -27,7 +27,7 @@ master:
   #      command:
   #      - "uname"
   #      - "-a"
-  numExecutors: 10
+  numExecutors: 4
   customJenkinsLabels: []
   # configAutoReload requires UseSecurity is set to true:
   useSecurity: true
@@ -168,9 +168,8 @@ master:
     - workflow-aggregator:2.6
     - credentials-binding:1.20
     - git:3.12.1
-    - sonar:2.9
+    - sonar:2.11
     - htmlpublisher:1.21
-    - sonar:2.8.1
     - configuration-as-code:1.40
 
   # Enable to always override the installed plugins with the values of 'master.installPlugins' on upgrade or redeployment.
