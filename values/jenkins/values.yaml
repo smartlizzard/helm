@@ -169,7 +169,7 @@ master:
     - credentials-binding:1.23
     - git:4.2.2
     - sonar:2.11
-    - htmlpublisher:1.21
+    - htmlpublisher:1.23
     - configuration-as-code:1.40
     - command-launcher:2.86
     - jdk-tool:2.112
@@ -178,6 +178,7 @@ master:
     - pipeline-utility-steps:2.5.0
     - workflow-step-api:2.22
     - appcenter:0.9.2
+    - slack-uploader:1.7
 
   # Enable to always override the installed plugins with the values of 'master.installPlugins' on upgrade or redeployment.
   # overwritePlugins: true
