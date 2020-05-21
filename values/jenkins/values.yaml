@@ -65,7 +65,7 @@ master:
       cpu: "50m"
       memory: "256Mi"
     limits:
-      cpu: "1000m"
+      cpu: "500m"
       memory: "1500Mi"
   # Environment variables that get added to the init container (useful for e.g. http_proxy)
   # initContainerEnv:
