@@ -232,21 +232,21 @@ master:
       #            value: DEPLOYMENT_NAME
       #          - key: SONARQUBE_SERVER_URL
       #            value: http://SONARQUBE
-      #sonarqube: |
-      #  unclassified:
-      #    sonarglobalconfiguration:     # mandatory
-      #      buildWrapperEnabled: true
-      #      installations:              # mandatory
-      #        - name: sonarqube         # id of the SonarQube configuration - to be used in jobs
-      #          serverUrl: http://SONARQUBE
-      #          credentialsId: sonarqube-token
-      #          serverAuthenticationToken: ""
-      #          additionalAnalysisProperties:
-      #          additionalProperties:
-      #          triggers:
-      #            envVar:
-      #            skipScmCause: false
-      #            skipUpstreamCause: false
+      sonarqube: |
+        unclassified:
+          sonarglobalconfiguration:     # mandatory
+            buildWrapperEnabled: true
+            installations:              # mandatory
+              - name: SonaQube         # id of the SonarQube configuration - to be used in jobs
+                serverUrl: http://sonar-sonarqube.sonar.svc.cluster.local    # SonarQube deployed in k8s, and this is sonar service url  
+                credentialsId: SonarQube
+                serverAuthenticationToken: ""
+                additionalAnalysisProperties:
+                additionalProperties:
+                triggers:
+                  envVar:
+                  skipScmCause: false
+                  skipUpstreamCause: false
       creds: |
         credentials:
           system:
