@@ -135,7 +135,7 @@ master:
   # security risk:  https://github.com/kubernetes/charts/issues/1341
   slaveListenerServiceType: "ClusterIP"
   slaveListenerServiceAnnotations: {}
-  slaveKubernetesNamespace:
+  slaveKubernetesNamespace: "jenkins"
 
   # Example of 'LoadBalancer' type of agent listener with annotations securing it
   # slaveListenerServiceType: LoadBalancer
@@ -247,22 +247,22 @@ master:
       #            envVar:
       #            skipScmCause: false
       #            skipUpstreamCause: false
-      #github-creds: |
-      #  credentials:
-      #    system:
-      #      domainCredentials:
-      #      - credentials:
-      #        - usernamePassword:
-      #            scope: GLOBAL
-      #            id: github
-      #            password: GITHUB_USER_TOKEN_FILLIN
-      #            username: GITHUB_USER_FILLIN
-      #            description: github
-      #        - string:
-      #            scope: GLOBAL
-      #            id: sonarqube-token
-      #            secret: SONARQUBE_TOKEN_FILLIN
-      #            description: SonarQube Token
+      github-creds: |
+        credentials:
+          system:
+            domainCredentials:
+            - credentials:
+              - usernamePassword:
+                  scope: GLOBAL
+                  id: github
+                  password: GITHUB_USER_TOKEN_FILLIN
+                  username: GITHUB_USER_FILLIN
+                  description: github
+              - string:
+                  scope: GLOBAL
+                  id: sonarqube-token
+                  secret: SONARQUBE_TOKEN_FILLIN
+                  description: SonarQube Token
       #global-libraries: |
       #  unclassified:
       #    globalLibraries:
@@ -274,7 +274,7 @@ master:
       #            scm:
       #              git:
       #                credentialsId: "github"
-      #                remote: "https://github.com/inadev-developer/jenkins-library.git"
+      #                remote: "https://github.com/smartlizzard/jenkins-library.git"
 
   # Optionally specify additional init-containers
   customInitContainers: []
