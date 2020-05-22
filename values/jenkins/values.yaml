@@ -247,7 +247,7 @@ master:
       #            envVar:
       #            skipScmCause: false
       #            skipUpstreamCause: false
-      github-creds: |
+      creds: |
         credentials:
           system:
             domainCredentials:
@@ -274,7 +274,7 @@ master:
       #            scm:
       #              git:
       #                credentialsId: "github"
-      #                remote: "https://github.com/smartlizzard/jenkins-library.git"
+      #                remote: "https://github.com/smartlizzard/jenkins.git"
 
   # Optionally specify additional init-containers
   customInitContainers: []
