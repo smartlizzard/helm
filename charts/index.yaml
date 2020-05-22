@@ -3,7 +3,7 @@ entries:
   docker-registry:
   - apiVersion: v1
     appVersion: 2.7.1
-    created: "2020-05-22T02:54:58.6954396+05:30"
+    created: "2020-05-22T11:10:19.2781718+05:30"
     description: A Helm chart for Docker Registry
     digest: 67bf49c25f1aaccd3d8ee82e1d77ef490be9c6a7719061a037c5bf58c530de40
     home: https://hub.docker.com/_/registry/
@@ -22,7 +22,7 @@ entries:
   jenkins:
   - apiVersion: v1
     appVersion: lts
-    created: "2020-05-22T02:54:58.6974795+05:30"
+    created: "2020-05-22T11:10:19.2921371+05:30"
     description: Open source continuous integration server. It supports multiple SCM
       tools including CVS, Subversion and Git. It can execute Apache Ant and Apache
       Maven-based projects as well as arbitrary scripts.
@@ -44,7 +44,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 1.6.3
-    created: "2020-05-22T02:54:58.6984765+05:30"
+    created: "2020-05-22T11:10:19.2950739+05:30"
     description: NGINX Ingress Controller
     digest: 0c6cafcc981fd202447d6e48b4ba4be22b1f3c56380ee7a9e121998476c80182
     icon: https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v1.6.3/deployments/helm-chart/chart-icon.png
@@ -63,7 +63,7 @@ entries:
   sonarqube:
   - apiVersion: v1
     appVersion: 8.2-community
-    created: "2020-05-22T02:54:58.7004707+05:30"
+    created: "2020-05-22T11:10:19.3351003+05:30"
     description: SonarQube is an open sourced code quality scanning tool
     digest: f9a6b7b13349bd915149b74e642915bd372475302a300d4324b8fbfdac775303
     home: https://www.sonarqube.org/
@@ -82,4 +82,23 @@ entries:
     urls:
     - https://smartlizzard.github.io/helm/charts/sonarqube-6.2.2.tgz
     version: 6.2.2
-generated: "2020-05-22T02:54:58.6337853+05:30"
+  spinnaker:
+  - apiVersion: v1
+    appVersion: 1.16.2
+    created: "2020-05-22T11:10:19.3500063+05:30"
+    description: Open source, multi-cloud continuous delivery platform for releasing
+      software changes with high velocity and confidence.
+    digest: 8359564bb89080ae2760a7df7369857687ac13ac0f80f137c7bced2dde1992ae
+    home: http://spinnaker.io/
+    icon: https://pbs.twimg.com/profile_images/669205226994319362/O7OjwPrh_400x400.png
+    maintainers:
+    - email: pradhanraghunath91@gmail.com
+      name: Raghunath Pradhan
+    name: spinnaker
+    sources:
+    - https://github.com/spinnaker
+    - https://github.com/viglesiasce/images
+    urls:
+    - https://smartlizzard.github.io/helm/charts/spinnaker-2.0.0-rc3.tgz
+    version: 2.0.0-rc3
+generated: "2020-05-22T11:10:19.2150541+05:30"
