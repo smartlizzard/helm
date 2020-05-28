@@ -170,7 +170,7 @@ master:
     - git:4.2.2
     - sonar:2.11
     - htmlpublisher:1.23
-    - configuration-as-code:1.40
+    - configuration-as-code:1.41
     - command-launcher:1.4
     - jdk-tool:1.4
     - ansible:1.0
