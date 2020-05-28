@@ -1,0 +1,39 @@
+artifactory:
+  image:
+    repository: docker.bintray.io/jfrog/artifactory-jcr
+  installer:
+    platform: jcr-helm
+  javaOpts: {}
+  persistence:
+    enabled: false
+  resources: {}
+databaseUpgradeReady: "yes"
+installerInfo: '{"productId": "Helm_artifactory-jcr/{{ .Chart.Version }}", "features":
+    [ { "featureId": "Platform/{{ default "kubernetes" .Values.installer.platform
+    }}"}]}'
+nginx:
+  enabled: false
+  service:
+    type: ClusterIP
+  tlsSecretName: ""
+ingress:
+  enabled: true
+  additionalRules: []
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: "0"
+    ingress.kubernetes.io/proxy-read-timeout: "600"
+    ingress.kubernetes.io/proxy-send-timeout: "600"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^/(v2)/token /artifactory/api/docker/null/v2/token;
+      rewrite ^/(v2)/([^\/]*)/(.*) /artifactory/api/docker/$2/$1/$3;
+  defaultBackend:
+    enabled: false
+  hosts:
+  - artifactory.eskool.com
+  labels: {}
+  tls: []
+postgresql:
+  enabled: true
+  persistence:
+    enabled: false

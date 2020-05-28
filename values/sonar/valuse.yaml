@@ -40,7 +40,7 @@ ingress:
   hosts:
     - name: sonar.eskool.com
       # Different clouds or configurations might need /* as the default path
-      path: /
+      path: /sonar
       # For additional control over serviceName and servicePort
       # serviceName: someService
       # servicePort: somePort
@@ -49,7 +49,7 @@ ingress:
   # kubernetes.io/tls-acme: "true"
   # This property allows for reports up to a certain size to be uploaded to SonarQube
     nginx.ingress.kubernetes.io/proxy-body-size: "8m"
-    path: /
+    path: /sonar
 # Additional labels for Ingress manifest file
   # labels:
   #  traffic-type: external
@@ -85,17 +85,17 @@ readinessProbe:
   failureThreshold: 6
   # If an ingress *path* other than the root (/) is defined, it should be reflected here
   # A trailing "/" must be included
-  sonarWebContext: /
+  sonarWebContext: /sonar/
   # sonarWebContext: /sonarqube/
 livenessProbe:
   initialDelaySeconds: 60
   periodSeconds: 30
   # If an ingress *path* other than the root (/) is defined, it should be reflected here
   # A trailing "/" must be included
-  sonarWebContext: /
+  sonarWebContext: /sonar/
   # sonarWebContext: /sonarqube/
   # If an ingress *path* is defined, it should be reflected here
-  sonar.web.context: /
+  # sonar.web.context: /
 
 ## Provide a secret containing one or more certificate files in the keys that will be added to cacerts
 ## The cacerts file will be set via SONARQUBE_WEB_JVM_OPTS
@@ -113,6 +113,9 @@ jvmOpts: ""
 # env:
 #   - name: VARIABLE
 #     value: my-value
+env:
+- name: sonar.web.context
+  value: /sonar
 
 # Set annotations for pods
 annotations: {}
